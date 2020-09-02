@@ -16,7 +16,7 @@ class CreateModelBooksTable extends Migration
     {
         Schema::create('book', function ( Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_user')->unsigned();
+            $table->unsignedBigInteger('id_user');
             $table->string('title');
             $table->integer('pages');
             $table->double('price',10,2);
